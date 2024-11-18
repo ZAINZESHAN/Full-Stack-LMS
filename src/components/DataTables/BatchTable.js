@@ -38,25 +38,19 @@ const data = [
   {
     id: "m5gr84i9",
     batch: "Batch A",
-    status: "Ongoing",
-    trainer: "Zain",
-    noOfStudent: "25",
+    status: "Pending",
     course: "Web and App Development",
   },
   {
     id: "3u1reuv4",
     batch: "Batch B",
     status: "Pending",
-    trainer: "Usman",
-    noOfStudent: "30",
     course: "App Development",
   },
   {
     id: "derv1ws0",
     batch: "Batch C",
-    status: "Completed",
-    trainer: "Rohan",
-    noOfStudent: "40",
+    status: "Pending",
     course: "Python Development",
   },
 ]
@@ -100,25 +94,18 @@ export const columns = [
     cell: ({ row }) => <div>{row.getValue("batch")}</div>,
   },
 
-  {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("status")}</div>
-    ),
-  },
-
-  {
-    accessorKey: "trainer",
-    header: "Trainer",
-    cell: ({ row }) => <div>{row.getValue("trainer")}</div>,
-  },
-
-  {
-    accessorKey: "noOfStudent",
-    header: "No of Students",
-    cell: ({ row }) => <div>{row.getValue("noOfStudent")}</div>,
-  },
+  
+  // {
+    //   accessorKey: "trainer",
+  //   header: "Trainer",
+  //   cell: ({ row }) => <div>{row.getValue("trainer")}</div>,
+  // },
+  
+  // {
+    //   accessorKey: "noOfStudent",
+  //   header: "No of Students",
+  //   cell: ({ row }) => <div>{row.getValue("noOfStudent")}</div>,
+  // },
 
   {
     accessorKey: "course",
@@ -127,7 +114,7 @@ export const columns = [
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
-        >
+          >
           Course
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
@@ -135,7 +122,15 @@ export const columns = [
     },
     cell: ({ row }) => <div>{row.getValue("course")}</div>,
   },
-
+  
+  {
+    accessorKey: "status",
+    header: "Status",
+    cell: ({ row }) => (
+      <div className="capitalize">{row.getValue("status")}</div>
+    ),
+  },
+  
   {
     id: "actions",
     enableHiding: false,

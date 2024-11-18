@@ -77,11 +77,11 @@ export function BatchDialog() {
 
 function BatchForm({ className }) {
     // Mock data for trainers and courses
-    const trainers = [
-        { value: "trainer1", label: "Sir Bilal" },
-        { value: "trainer2", label: "Sir Ghous" },
-        { value: "trainer3", label: "Sir Shehzad" },
-    ];
+    // const trainers = [
+    //     { value: "trainer1", label: "Sir Bilal" },
+    //     { value: "trainer2", label: "Sir Ghous" },
+    //     { value: "trainer3", label: "Sir Shehzad" },
+    // ];
 
     const courses = [
         { value: "course1", label: "Web and App Development" },
@@ -99,9 +99,9 @@ function BatchForm({ className }) {
                     type="text"
                     id="batch"
                     name="title"
-                    placeholder="Batch" />
+                    />
             </div>
-
+            {/* 
             <div className="grid gap-2">
                 <Label htmlFor="status">Status</Label>
                 <Select required>
@@ -115,8 +115,8 @@ function BatchForm({ className }) {
                         <SelectItem value="merged">Merged</SelectItem>
                     </SelectContent>
                 </Select>
-            </div>
-
+            </div> */}
+            {/* 
             <div className="grid gap-2">
                 <Label htmlFor="trainer">Trainer</Label>
                 <Select required>
@@ -131,6 +131,16 @@ function BatchForm({ className }) {
                         ))}
                     </SelectContent>
                 </Select>
+            </div> */}
+
+            <div className="grid gap-2">
+                <Label htmlFor="discription">Discription</Label>
+                <Input
+                    required
+                    type="text"
+                    id="discription"
+                    name="discription"
+                />
             </div>
 
             <div className="grid gap-2">
@@ -147,17 +157,6 @@ function BatchForm({ className }) {
                         ))}
                     </SelectContent>
                 </Select>
-            </div>
-
-            <div className="grid gap-2">
-                <Label htmlFor="noOfStudents">No of Students</Label>
-                <Input
-                    required
-                    type="text"
-                    id="noOfStudents"
-                    name="noOfStudents"
-                    placeholder="No of Students"
-                />
             </div>
 
             <Button type="submit">Add Batch</Button>
